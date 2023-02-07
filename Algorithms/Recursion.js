@@ -4,7 +4,6 @@ const countDown = (num) => {
 		return;
 	}
 
-	console.log(num);
 	num--;
 
 	countDown(num);
@@ -16,6 +15,12 @@ const sumRange = (num) => {
 	return num + sumRange(num - 1);
 };
 
-const res = sumRange(3);
+const fib = (num) => {
+	if (num <= 2) return 1;
+
+	return fib(num - 1) + fib(num - 2);
+};
+
+const res = fib(10);
 
 console.log(res);
